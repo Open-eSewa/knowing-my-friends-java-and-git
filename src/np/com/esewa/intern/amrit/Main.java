@@ -34,9 +34,36 @@ public class Main {
         System.out.println("Assignment 2: "+y);
 
     }
+    public static void Precedencerule(){
+        /*  Arithmetic precedence
+         * Operations inside parentheses are always performed first, overriding default precedence.
+         * Multiplication and division have higher precedence than addition and subtraction.
+         * Unary operators (e.g., ++i, --i, !, -) might have higher precedence than other arithmetic operations.
+         */
+        int result1 = 5 + 3 * 2; // Multiplication (*) precedes addition (+)
+        int result2 = (5 + 3) * 2; // Parentheses enforce addition before multiplication
+
+
+        System.out.println("Result 1: " + result1); // Output: Result 1: 11
+        System.out.println("Result 2: " + result2); // Output: Result 2: 16
+
+        /* Logical precedence
+         * Logical operators like && (AND) and || (OR) have lower precedence than relational and equality operators.
+         * They operate on boolean values, and their evaluation follows specific rules.
+         */
+        boolean bool1 = (10 > 5) && (7 != 3); // Both conditions must be true for &&
+        boolean bool2 = (5 <= 3) || (8 == 8); // Only one condition needs to be true for ||
+
+        System.out.println("Boolean 1: " + bool1); // Output: Boolean 1: true
+        System.out.println("Boolean 2: " + bool2); // Output: Boolean 2: true
+
+    }
 
     public static void main(String[] args){
         System.out.println("Expression Rule: ");
         Expressionrule();
+
+        System.out.println("Precedence Rule: ");
+        Precedencerule();
     }
 }
