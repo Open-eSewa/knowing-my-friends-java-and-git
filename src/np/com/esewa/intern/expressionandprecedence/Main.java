@@ -1,4 +1,4 @@
-package np.com.esewa.intern.amrit;
+package np.com.esewa.intern.expressionandprecedence;
 
 /**
  * This class demonstrates expressions and precedence rules in Java.
@@ -8,7 +8,7 @@ package np.com.esewa.intern.amrit;
  */
 public class Main {
 
-    public static void Expressionrule (){
+    public static void expressionRule (){
         // Arithmetic Expression
         int a = 3+5*8; // This is a simple arithmetic expression in java
         int b = (5-3)*8; // Parentheses enforced expression
@@ -34,7 +34,7 @@ public class Main {
         System.out.println("Assignment 2: "+y);
 
     }
-    public static void Precedencerule(){
+    public static void precedenceRule(){
         /*  Arithmetic precedence
          * Operations inside parentheses are always performed first, overriding default precedence.
          * Multiplication and division have higher precedence than addition and subtraction.
@@ -61,9 +61,9 @@ public class Main {
 
     public static void main(String[] args){
         System.out.println("Expression Rule: ");
-        Expressionrule();
+        expressionRule();
 
         System.out.println("Precedence Rule: ");
-        Precedencerule();
+        precedenceRule();
     }
 }
