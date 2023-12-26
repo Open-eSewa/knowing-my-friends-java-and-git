@@ -26,7 +26,7 @@ public class WrapperClass {
         boolean result = b1 || b2;
         System.out.println("result of boolean or: "+ result);
     }
-
+    //main class .
     public static void main(String[] args) {
         WrapperClass main = new WrapperClass();
         System.out.println("Wrapper int is: "+main.wrapperInt());
