@@ -14,6 +14,12 @@ public class ExampleLong {
         long seconds;
         long distance;
         // approximate speed of light in miles per second
+
+        /**
+         * so in 1000 days light will travel about 160704000000 miles
+         * which is not possible when we have int
+         *
+         */
         lightspeed = 186000;
         days = 1000; // specify number of days here
         seconds = days * 24 * 60 * 60; // convert to seconds
@@ -22,11 +28,6 @@ public class ExampleLong {
         System.out.print(" days light will travel about ");
         System.out.println(distance + " miles.");
 
-        /**
-         * so in 1000 days light will travel about 160704000000 miles
-         * which is not possible when we have int
-         *
-         */
     }
 
     public static void main(String[] args) {
