@@ -41,10 +41,7 @@ public class Main {
         // Ternary Expression
         int d = 10;
         int e = 5;
-
-       // Ternary expression assigning the maximum value to 'max'
         int maximum = (d > e) ? d : e; // If x > y, assign x to max; otherwise, assign y to max
-
         System.out.println("The maximum value is: " + maximum); // Output: The maximum value is: 10
 
 
