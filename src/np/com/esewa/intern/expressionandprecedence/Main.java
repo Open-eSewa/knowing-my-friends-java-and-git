@@ -38,6 +38,16 @@ public class Main {
         int max = Math.max(10, 20); // Calls Math.max method to find the maximum of two values
         System.out.println("Maximum number is: " + max);
 
+        // Ternary Expression
+        int d = 10;
+        int e = 5;
+
+       // Ternary expression assigning the maximum value to 'max'
+        int maximum = (d > e) ? d : e; // If x > y, assign x to max; otherwise, assign y to max
+
+        System.out.println("The maximum value is: " + maximum); // Output: The maximum value is: 10
+
+
     }
     public static void precedenceRule(){
         /*  Arithmetic precedence
