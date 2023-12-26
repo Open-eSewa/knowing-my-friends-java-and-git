@@ -1,11 +1,9 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-public class Check extends JFrame{
+public class SimpleCalculator extends JFrame{
     static String operator=null;
     static String Calculator(String str1)throws NotFound{
-
         String str=str1;
         int index=0;
         for (char data : str.toCharArray()) {
@@ -25,7 +23,7 @@ public class Check extends JFrame{
         }
         for(char data:second.toCharArray()){
             if(data=='*'||data=='+'||data=='-'||data=='%'){
-                throw new NotFound("Cannot perform two exception");
+                throw new NotFound("Cannot perform two operation");
             }
         }
         int n2=Integer.parseInt(second);
@@ -45,12 +43,10 @@ public class Check extends JFrame{
                    return "The divide is "+(float)n1/n2;
                 }
             default:
-                System.out.println("No any operation available");
 
+                return "No any operation available";
         }
-        return here;
     }
-
     public static void main(String[] args) throws NotFound{
         // check.Calculator("4+");
         JFrame frame=new JFrame("Simple Calculator");
@@ -120,7 +116,7 @@ public class Check extends JFrame{
                 data=num1.getText().toString()+operator+num2.getText().toString();
                 result.setVisible(true);
                 try {
-                    result.setText(Check.Calculator(data));
+                    result.setText(SimpleCalculator.Calculator(data));
                 } catch (NotFound e) {
                     throw new RuntimeException(e);
                 }
