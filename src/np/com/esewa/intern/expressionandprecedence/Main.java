@@ -1,4 +1,5 @@
 package np.com.esewa.intern.expressionandprecedence;
+import java.lang.Math;
 
 /**
  * This class demonstrates expressions and precedence rules in Java.
@@ -33,6 +34,10 @@ public class Main {
         System.out.println("Assignment 1: "+x);
         System.out.println("Assignment 2: "+y);
 
+        // Method call Expression
+        int max = Math.max(10, 20); // Calls Math.max method to find the maximum of two values
+        System.out.println("Maximum number is: " + max);
+
     }
     public static void precedenceRule(){
         /*  Arithmetic precedence
@@ -44,8 +49,8 @@ public class Main {
         int result2 = (5 + 3) * 2; // Parentheses enforce addition before multiplication
 
 
-        System.out.println("Result 1: " + result1); // Output: Result 1: 11
-        System.out.println("Result 2: " + result2); // Output: Result 2: 16
+        System.out.println("Result 1: " + result1);
+        System.out.println("Result 2: " + result2);
 
         /* Logical precedence
          * Logical operators like && (AND) and || (OR) have lower precedence than relational and equality operators.
