@@ -106,7 +106,7 @@ public class SimpleCalculator extends JFrame{
         btn.setBounds(100,200,150,40);
         frame.add(btn);
         JLabel result=new JLabel();
-        result.setBounds(10,240,400,60);
+        result.setBounds(10,240,600,60);
         result.setVisible(false);
         frame.add(result);
         btn.addActionListener(new ActionListener() {
@@ -118,7 +118,7 @@ public class SimpleCalculator extends JFrame{
                 try {
                     result.setText(SimpleCalculator.Calculator(data));
                 } catch (NotFound e) {
-                    throw new RuntimeException(e);
+                    result.setText(e.getLocalizedMessage());
                 }
             }
         });

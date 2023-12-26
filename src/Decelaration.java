@@ -30,6 +30,15 @@ public class Decelaration {
         arra[1]='a';
         arra[2]='r';
 
+        String s=null;
+        switch (s){
+            case null -> {
+                System.out.println("Nothing here");
+            }
+            default -> {
+                System.out.println("I am defalut");
+            }
+        }
 
     }
 }
