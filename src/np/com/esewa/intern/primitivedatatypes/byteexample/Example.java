@@ -2,6 +2,7 @@ package np.com.esewa.intern.primitivedatatypes.byteexample;
 
 public class Example {
 
+
     /**
      * smallest integer type is byte
      * range -128 to 127
