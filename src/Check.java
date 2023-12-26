@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Check {
-
+public class Check extends JFrame{
+    static String operator=null;
     static String Calculator(String str1)throws NotFound{
 
         String str=str1;
@@ -33,32 +33,28 @@ public class Check {
         String here=null;
         switch (ch){
             case '*':
-                System.out.println("The product is "+(n1*n2));
-                break;
+                return "The product is "+(n1*n2);
             case '+':
-                here="The sum is "+(n1+n2);
-                return here;
-            //System.out.println("The sum is "+(n1+n2));
+                return "The sum is "+(n1+n2);
             case '-':
-                System.out.println("The difference is "+(n1-n2));
-                break;
+                return "The difference is "+(n1-n2);
             case '/':
                 if(n2==0){
                     throw new NotFound("Cannot divisible by Zero ");
                 }else {
-                    System.out.println("The divide is "+(float)n1/n2);
+                   return "The divide is "+(float)n1/n2;
                 }
-                break;
             default:
                 System.out.println("No any operation available");
 
         }
         return here;
     }
+
     public static void main(String[] args) throws NotFound{
         // check.Calculator("4+");
         JFrame frame=new JFrame("Simple Calculator");
-        frame.setSize(500,500);
+        frame.setSize(700,700);
         frame.setVisible(true);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,34 +62,69 @@ public class Check {
         firstnumber.setBounds(10,20,150,50);
         frame.add(firstnumber);
         JTextField num1=new JTextField();
-        num1.setBounds(180,20,150,50);
+        num1.setBounds(180,20,150,40);
         frame.add(num1);
+        JButton add=new JButton("+");
+        add.setBounds(20,80,50,40);
+        frame.add(add);
+        add.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                operator="+";
+            }
+        });
+        JButton sub=new JButton("-");
+       sub.setBounds(90,80,40,40);
+        frame.add(sub);
+       sub.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                operator="-";
+            }
+        });
+        JButton mult=new JButton("*");
+        mult.setBounds(150,80,40,40);
+        frame.add(mult);
+        mult.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                operator="*";
+            }
+        });
+        JButton div=new JButton("/");
+       div.setBounds(210,80,40,40);
+        frame.add(div);
+        div.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                operator="/";
+            }
+        });
         JLabel secondnumber=new JLabel("Enter second number:");
-        secondnumber.setBounds(10,80,200,50);
+        secondnumber.setBounds(10,150,200,50);
         frame.add(secondnumber);
         JTextField num2=new JTextField();
-        num2.setBounds(180,80,150,50);
+        num2.setBounds(180,150,150,40);
         frame.add(num2);
         JButton btn=new JButton("Calculate");
-        btn.setBounds(100,140,150,40);
+        btn.setBounds(100,200,150,40);
         frame.add(btn);
         JLabel result=new JLabel();
-        result.setBounds(10,190,400,60);
+        result.setBounds(10,240,400,60);
         result.setVisible(false);
         frame.add(result);
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String data=null;
-                data=num1.getText().toString()+"+"+num2.getText().toString();
+                data=num1.getText().toString()+operator+num2.getText().toString();
                 result.setVisible(true);
                 try {
-                    result.setText(check.Calculator(data));
+                    result.setText(Check.Calculator(data));
                 } catch (NotFound e) {
                     throw new RuntimeException(e);
                 }
             }
         });
-
     }
 }
