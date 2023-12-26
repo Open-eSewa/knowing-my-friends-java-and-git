@@ -16,7 +16,8 @@ public class SimpleCalculator extends JFrame{
             throw new NotFound("Cannot perform operation as it need initial number or got illegal operator");
         }
         String first=str.substring(0,index);
-        int n1=Integer.parseInt(first);
+        //int n1=Integer.parseInt(first);
+        float n1=Float.parseFloat(first);
         String second=str.substring(index+1,str.length());
         if(second==null){
             throw new NotFound("Empty value after operator");
@@ -26,7 +27,8 @@ public class SimpleCalculator extends JFrame{
                 throw new NotFound("Cannot perform two operation");
             }
         }
-        int n2=Integer.parseInt(second);
+//        int n2=Integer.parseInt(second);
+        float n2=Float.parseFloat(second);
         char ch=str.charAt(index);
         String here=null;
         switch (ch){
