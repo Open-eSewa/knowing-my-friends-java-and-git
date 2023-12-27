@@ -7,11 +7,21 @@ import static java.lang.System.*;
 /**
  *  Document the usage of each bitwise operator using Java documentation comments
  *  Implement a Java class showcasing bitwise operators (&, |, ^, ~, <<, >>, >>>).
+ * @see @bitwiseAND
  */
 
 
 public class BitwiseOperatorTask {
 
+    /**
+     *
+     * @param a
+     * @param b
+     *
+     * @see #bitwiseAND(int, int)
+     *
+     *
+     */
 
 
     public static void bitwiseAND(int a, int b) {
@@ -33,9 +43,9 @@ public class BitwiseOperatorTask {
 
 
 
-    public static void bitwiseNOT(int a) {
-        System.out.println("Bitwise NOT Operator");
-        System.out.println("NOT of a: " + ~a);
+    public static void bitwiseComplement(int a) {
+        System.out.println("Bitwise Complement Operator");
+        System.out.println("Complement of a: " + ~a);
     }
 
     public static void bitwiseLeftShift(int a) {
@@ -72,7 +82,7 @@ public class BitwiseOperatorTask {
                     1. AND Operator
                     2. OR Operator
                     3. XOR Operator
-                    4. NOT Operator
+                    4. Complement Operator
                     5. Signed Left Sift Operator
                     6. Signed Right Shift Operator
                     7. Unsigned Right Shift
@@ -99,7 +109,7 @@ public class BitwiseOperatorTask {
                 case 1 -> bitwiseAND(a, b);
                 case 2 -> bitwiseOR(a, b);
                 case 3 -> bitwiseXOR(a, b);
-                case 4 -> bitwiseNOT(a);
+                case 4 -> bitwiseComplement(a);
                 case 5 -> bitwiseLeftShift(a);
                 case 6 -> bitwiseRightShift(a);
                 case 7 -> bitwiseUnsignedRightShift(a);
