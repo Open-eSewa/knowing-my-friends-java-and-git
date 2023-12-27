@@ -5,22 +5,44 @@ import java.util.Scanner;
 import static java.lang.System.*;
 
 /**
- *  Document the usage of each bitwise operator using Java documentation comments
- *  Implement a Java class showcasing bitwise operators (&, |, ^, ~, <<, >>, >>>).
- * @see @bitwiseAND
+ * Document the usage of each bitwise operator using Java documentation comments
+ * Implement a Java class showcasing bitwise operators (&, |, ^, ~, <<, >>, >>>).
+ * <p>
+ * There are various bitwise operators such as:
+ * 1. AND(&)
+ *
+ * @see #bitwiseAND(int, int)
+ * <p>
+ * 2. OR(|)
+ * @see #bitwiseOR(int, int)
+ * <p>
+ * 3. XOR (^)
+ * * @see #bitwiseXOR(int, int)
+ * <p>
+ * 4. Complement (~)
+ * @see #bitwiseComplement(int)
+ * <p>
+ * <p>
+ * 5. Right Shift(>>)
+ * @see #bitwiseRightShift(int)
+ * <p>
+ * <p>
+ * 6. Left Shift(<<)
+ * @see #bitwiseLeftShift(int)
+ * <p>
+ * <p>
+ * <p>
+ * 7. Unsigned Right Shift(>>>)
+ * @see #bitwiseUnsignedRightShift(int)
  */
 
 
 public class BitwiseOperatorTask {
 
     /**
-     *
      * @param a
      * @param b
-     *
      * @see #bitwiseAND(int, int)
-     *
-     *
      */
 
 
@@ -28,7 +50,6 @@ public class BitwiseOperatorTask {
         System.out.print("Bitwise AND Operator: ");
         System.out.println(a & b);
     }
-
 
 
     public static void bitwiseOR(int a, int b) {
@@ -40,7 +61,6 @@ public class BitwiseOperatorTask {
         System.out.print("Bitwise XOR Operator: ");
         System.out.println(a ^ b);
     }
-
 
 
     public static void bitwiseComplement(int a) {
