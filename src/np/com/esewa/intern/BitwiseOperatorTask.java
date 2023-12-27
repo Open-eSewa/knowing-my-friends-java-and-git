@@ -4,13 +4,22 @@ import java.util.Scanner;
 
 import static java.lang.System.*;
 
+/**
+ *  Document the usage of each bitwise operator using Java documentation comments
+ *  Implement a Java class showcasing bitwise operators (&, |, ^, ~, <<, >>, >>>).
+ */
+
+
 public class BitwiseOperatorTask {
+
 
 
     public static void bitwiseAND(int a, int b) {
         System.out.print("Bitwise AND Operator: ");
         System.out.println(a & b);
     }
+
+
 
     public static void bitwiseOR(int a, int b) {
         System.out.print("Bitwise OR Operator: ");
@@ -87,32 +96,14 @@ public class BitwiseOperatorTask {
 
 
             switch (choice) {
-                case 1:
-                    bitwiseAND(a, b);
-                break;
-
-                case 2:
-                    bitwiseOR(a, b);
-                break;
-                case 3:
-                    bitwiseXOR(a, b);
-                break;
-                case 4:
-                    bitwiseNOT(a);
-                break;
-                case 5:
-                    bitwiseLeftShift(a);
-                break;
-                case 6:
-                    bitwiseRightShift(a);
-                break;
-                case 7:
-                    bitwiseUnsignedRightShift(a);
-                break;
-                default:
-                    out.println("Check Your Choice!!!");
-                    break;
-
+                case 1 -> bitwiseAND(a, b);
+                case 2 -> bitwiseOR(a, b);
+                case 3 -> bitwiseXOR(a, b);
+                case 4 -> bitwiseNOT(a);
+                case 5 -> bitwiseLeftShift(a);
+                case 6 -> bitwiseRightShift(a);
+                case 7 -> bitwiseUnsignedRightShift(a);
+                default -> out.println("Check Your Choice!!!");
             }
 
             System.out.print("Do you want to do More Bitwise Operation again? (y/n): ");
