@@ -1,12 +1,12 @@
 package np.com.esewa.intern.javasyntax;
 import java.util.Scanner;
-
-
-class Message{
-    /**
+ /**
      *
      * @param msg
      */
+
+class Message{
+   
     public Message(String msg){
         System.out.println(msg);
     }
