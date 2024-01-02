@@ -1,6 +1,6 @@
 package np.com.esewa.intern.primitivedatatypes.shortexample;
 
-public class Example {
+public class ExampleShort {
 
     static void shortExample(){
         /**

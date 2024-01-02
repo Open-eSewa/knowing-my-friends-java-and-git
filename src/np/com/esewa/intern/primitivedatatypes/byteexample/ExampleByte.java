@@ -1,6 +1,6 @@
 package np.com.esewa.intern.primitivedatatypes.byteexample;
 
-public class Example {
+public class ExampleByte {
 
 
     /**
@@ -39,7 +39,6 @@ public class Example {
 
     public static void main(String[] args) {
         byteExample();
-
 
     }
 }

@@ -21,7 +21,6 @@ public class ExampleLong {
         /**
          * in 1000 days light will travel about 160704000000 miles
          * which is not possible when we have int
-         *
          */
 
     }
