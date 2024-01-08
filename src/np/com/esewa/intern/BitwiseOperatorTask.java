@@ -40,59 +40,59 @@ import static java.lang.System.*;
 public class BitwiseOperatorTask {
 
     /**
-     * @param a
-     * @param b
+     * @param firstNumber
+     * @param secondNumber
      * @see #bitwiseAND(int, int)
      */
 
 
-    public static void bitwiseAND(int a, int b) {
+    public static void bitwiseAND(int firstNumber, int secondNumber) {
         System.out.print("Bitwise AND Operator: ");
-        System.out.println(a & b);
+        System.out.println(firstNumber & secondNumber);
     }
 
 
-    public static void bitwiseOR(int a, int b) {
+    public static void bitwiseOR(int firstNumber, int secondNumber) {
         System.out.print("Bitwise OR Operator: ");
-        System.out.println(a | b);
+        System.out.println(firstNumber | secondNumber);
     }
 
-    public static void bitwiseXOR(int a, int b) {
+    public static void bitwiseXOR(int firstNumber, int secondNumber) {
         System.out.print("Bitwise XOR Operator: ");
-        System.out.println(a ^ b);
+        System.out.println(firstNumber ^ secondNumber);
     }
 
 
-    public static void bitwiseComplement(int a) {
+    public static void bitwiseComplement(int givenNumber) {
         System.out.println("Bitwise Complement Operator");
-        System.out.println("Complement of a: " + ~a);
+        System.out.println("Complement of a: " + ~givenNumber);
     }
 
-    public static void bitwiseLeftShift(int a) {
+    public static void bitwiseLeftShift(int givenNumber) {
         System.out.println("Bitwise LeftShift Operator");
         System.out.print("LeftShift of a: ");
-        System.out.println(a << 2);
+        System.out.println(givenNumber << 2);
     }
 
-    public static void bitwiseRightShift(int a) {
+    public static void bitwiseRightShift(int givenNumber) {
         System.out.println("Bitwise RightShift Operator");
         System.out.print("RightShift of a: ");
-        System.out.println(a >> 2);
+        System.out.println(givenNumber >> 2);
     }
 
 
-    public static void bitwiseUnsignedRightShift(int a) {
+    public static void bitwiseUnsignedRightShift(int givenNumber) {
         System.out.println("Bitwise UnsignedRightShift Operator");
         System.out.print("UnsignedRightShift of a: ");
-        System.out.println(a >>> 2);
+        System.out.println(givenNumber >>> 2);
     }
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-
-        int choice, a, b = 0;
+        int givenNumber = 0;
+        int choice, firstNumber =0, secondNumber = 0;
         char yesNoChoice;
 
         do {
@@ -114,25 +114,25 @@ public class BitwiseOperatorTask {
 
             if (choice > 0 && choice <= 3) {
                 System.out.print("Enter First No.: ");
-                a = sc.nextInt();
+                firstNumber = sc.nextInt();
 
                 System.out.print("Enter Second No.: ");
-                b = sc.nextInt();
+                secondNumber = sc.nextInt();
 
             } else {
                 System.out.print("Enter a Number: ");
-                a = sc.nextInt();
+                givenNumber = sc.nextInt();
             }
 
 
             switch (choice) {
-                case 1 -> bitwiseAND(a, b);
-                case 2 -> bitwiseOR(a, b);
-                case 3 -> bitwiseXOR(a, b);
-                case 4 -> bitwiseComplement(a);
-                case 5 -> bitwiseLeftShift(a);
-                case 6 -> bitwiseRightShift(a);
-                case 7 -> bitwiseUnsignedRightShift(a);
+                case 1 -> bitwiseAND(firstNumber, secondNumber);
+                case 2 -> bitwiseOR(firstNumber, secondNumber);
+                case 3 -> bitwiseXOR(firstNumber, secondNumber);
+                case 4 -> bitwiseComplement(givenNumber);
+                case 5 -> bitwiseLeftShift(givenNumber);
+                case 6 -> bitwiseRightShift(givenNumber);
+                case 7 -> bitwiseUnsignedRightShift(givenNumber);
                 default -> out.println("Check Your Choice!!!");
             }
 
