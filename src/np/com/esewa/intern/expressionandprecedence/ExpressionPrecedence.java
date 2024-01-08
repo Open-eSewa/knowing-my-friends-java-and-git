@@ -7,7 +7,7 @@ import java.lang.Math;
  * An expression in programming is a combination of operators and operands.
  * Precedence determines the part of expression that executes first.
  */
-public class Main {
+public class ExpressionPrecedence {
 
     public static void expressionRule (){
         // Arithmetic Expression
