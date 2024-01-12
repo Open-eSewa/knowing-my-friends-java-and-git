@@ -4,7 +4,8 @@ public class WrapperClass {
 
     public int wrapperInt() {
         Integer n1 = new Integer(15);
-        Integer n2 = Integer.valueOf("16");     //autoboxing -> automatic Conversion of primitive type to its corresponding wrapper class object
+        int intNum = 16;
+        Integer n2 = intNum; //autoboxing -> automatic Conversion of primitive type to its corresponding wrapper class object
         int sum = n1.intValue() + n2.intValue();
 //                int sum = n1+n2;     //auto-unboxing -> automatic conversion of a wrapper class object to its corresponding primitive data type
         return sum;
