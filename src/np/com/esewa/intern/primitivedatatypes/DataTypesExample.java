@@ -3,7 +3,7 @@ package np.com.esewa.intern.primitivedatatypes;
 public class DataTypesExample {
 
 
-    //Boolean
+    //boolean
     static void booleanExample() {
         boolean isJavaFun = true;
         System.out.println("Boolean Example: " + isJavaFun);
@@ -15,7 +15,7 @@ public class DataTypesExample {
         }
     }
 
-    //Byte
+    //byte
 
     static void byteExample() {
         byte b = 127;
@@ -44,7 +44,7 @@ public class DataTypesExample {
 
     }
 
-    //Charcter
+    //char
 
     /**
      * the data type used to store characters is char
@@ -59,7 +59,7 @@ public class DataTypesExample {
         System.out.println(ch1 + " " + ch2);
     }
 
-    //Double
+    //double
     static void doubleExample() {
 
         double myDouble = 1234.5678;
@@ -132,7 +132,7 @@ public class DataTypesExample {
         System.out.println(byteValue3);
     }
 
-    //Long Example
+    //long Example
     public static void longExample() {
         int lightspeed;
         long days;
