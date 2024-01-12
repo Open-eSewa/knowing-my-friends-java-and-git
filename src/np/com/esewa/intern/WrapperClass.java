@@ -9,7 +9,6 @@ public class WrapperClass {
         int sum = n1.intValue() + n2.intValue();
 //                int sum = n1+n2;     //auto-unboxing -> automatic conversion of a wrapper class object to its corresponding primitive data type
         return sum;
-//                System.out.println("Sum is :"+ sum);
     }
 
     public void wrapperChar() {
@@ -25,7 +24,6 @@ public class WrapperClass {
         System.out.println("result of boolean or: " + result);
     }
 
-    //main class .
     public static void main(String[] args) {
         WrapperClass wrapperClass = new WrapperClass();
         System.out.println("Wrapper int is: " + wrapperClass.wrapperInt());
